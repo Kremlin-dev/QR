@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contact Numbers</title>
+    <style>
+        /* Existing CSS styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 600px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header {
+            background: #d32f2f;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .main-logo {
+            background: #ffffff;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 2px solid #f4f4f4;
+        }
+
+        .main-logo img {
+            max-width: 120px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin: 10px 0 5px;
+        }
+
+        .header p {
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 15px 0;
+        }
+
+        .logos img {
+            max-width: 50px;
+        }
+
+        .instruction {
+            text-align: center;
+            font-size: 14px;
+            margin: 15px 20px;
+            color: #555;
+        }
+
+        .numbers {
+            padding: 20px;
+        }
+
+        .number {
+            display: flex;
+            align-items: center;
+            background: #f4f4f4;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .number:hover {
+            background: #f9ebeb;
+            cursor: pointer;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            background: #d32f2f;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 18px;
+            margin-right: 15px;
+        }
+
+        .info {
+            font-size: 16px;
+        }
+
+        .info a {
+            text-decoration: none;
+            color: #d32f2f;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 12px;
+            background: #f4f4f4;
+            color: #555;
+        }
+
+        .footer strong {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .hr-section {
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            color: #555;
+            background: #f9f9f9;
+            font-weight: bold;
+            border-top: 2px solid #f4f4f4;
+        }
+
+        /* Popup Styles */
+        #addToHomeScreenPopup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 300px;
+            width: 100%;
+        }
+
+        .popup-content p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        #closePopup {
+            padding: 10px 20px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-logo">
+            <img src="./images/OIP.jpg" alt="Main Logo">
+        </div>
+
+        <div class="header">
+            <h1>Emergency Contact Numbers</h1>
+            <p>Ambulance | Fire | Rescue | Security</p>
+        </div>
+
+        <div class="logos">
+            <img src="./images/ambu.jpg" alt="Ambulance">
+            <img src="./images/fire.jpg" alt="Fire">
+            <img src="./images/resc.jpg" alt="Rescue">
+            <img src="./images/sec.jpg" alt="Security"> 
+        </div>
+
+        <div class="instruction">
+            Click on the numbers below to call directly in case of an emergency.
+        </div>
+
+        <div class="numbers">
+            <div class="number">
+                <div class="icon">☎️</div>
+                <div class="info">
+                    <a href="tel:+0322091333">0322 091 333</a> - Landline/Mobile
+                </div>
+            </div>
+
+            <div class="number">
+                <div class="icon">📞</div>
+                <div class="info">
+                    <a href="tel:+800">800</a> - AGAG Landline
+                </div>
+            </div>
+
+            <div class="number">
+                <div class="icon">📲</div>
+                <div class="info">
+                    <a href="tel:+0800400002">0800 400 002</a> - Toll Free/Mobile
+                </div>
+            </div>
+
+            <div class="number">
+                <div class="icon">📡</div>
+                <div class="info">
+                    Channel 4 - Two-Way Radio
+                </div>
+            </div>
+
+            <div class="number">
+                <div class="icon">🔒</div>
+                <div class="info">
+                    <a href="tel:+0556582933">0556 582 933</a> - Security
+                </div>
+            </div>
+
+            <div class="number">
+                <div class="icon">🔒</div>
+                <div class="info">
+                    <a href="tel:+0322296756">0322 296 756</a> - Security
+                </div>
+            </div>
+
+            <div class="number">
+                <div class="icon">🔒</div>
+                <div class="info">
+                    <a href="tel:+0322296755">0322 296 755</a> - Security
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <strong>SENIOR MANAGER - HUMAN RESOURCES</strong>
+            Please avoid prank calls. This service is for emergencies only.
+        </div>
+    </div>
+
+    <!-- Add to Home Screen Popup -->
+    <div id="addToHomeScreenPopup">
+        <div class="popup-content">
+            <p>Add this page to your home screen for quick access!</p>
+            <div id="instructions">
+                <!-- Instructions will be dynamically inserted here -->
+            </div>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to detect mobile devices
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // Function to get platform-specific instructions
+        function getPlatformInstructions() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                return `
+                    <ol>
+                        <li>Tap the <strong>menu button</strong> (three dots) at the top right of your browser.</li>
+                        <li>Select <strong>"Add to Home screen"</strong>.</li>
+                        <li>Confirm by tapping <strong>"Add"</strong>.</li>
+                    </ol>
+                `;
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return `
+                    <ol>
+                        <li>Tap the <strong>share button</strong> at the bottom of your browser.</li>
+                        <li>Scroll down and select <strong>"Add to Home Screen"</strong>.</li>
+                        <li>Tap <strong>"Add"</strong> in the top right corner.</li>
+                    </ol>
+                `;
+            } else {
+                return `
+                    <p>Your browser does not support adding to the home screen directly. Please use a mobile device.</p>
+                `;
+            }
+        }
+
+        // Function to show the popup
+        function showAddToHomeScreenPopup() {
+            const popup = document.getElementById('addToHomeScreenPopup');
+            const instructions = document.getElementById('instructions');
+
+            // Insert platform-specific instructions
+            instructions.innerHTML = getPlatformInstructions();
+
+            // Show the popup
+            popup.style.display = 'flex';
+
+            // Close the popup when the button is clicked
+            const closeButton = document.getElementById('closePopup');
+            closeButton.addEventListener('click', () => {
+                popup.style.display = 'none';
+            });
+        }
+
+        // Show the popup for all users (both web and mobile)
+        showAddToHomeScreenPopup();
+    </script>
+</body>
+</html>
