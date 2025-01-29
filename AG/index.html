@@ -21,7 +21,6 @@
             height: 100vh;
             padding: 0;
             margin: 0;
-            overflow: hidden; /* Prevent scrolling */
         }
 
         .container {
@@ -30,11 +29,10 @@
             border-radius: 10px;
             width: 100%;
             max-width: 600px;
-            min-height: 100vh; /* Ensure full viewport height */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            padding: 10px;
+            overflow: hidden;
         }
 
         .main-logo {
@@ -50,7 +48,7 @@
             background: #d32f2f;
             color: #ffffff;
             text-align: center;
-            padding: 8px;
+            padding: 10px;
             flex-shrink: 0;
         }
 
@@ -59,29 +57,31 @@
         }
 
         .header p {
-            font-size: 11px;
+            font-size: 12px;
         }
 
         .instruction {
             text-align: center;
-            font-size: 11px;
+            font-size: 12px;
             padding: 5px;
             color: #555;
         }
 
+        /* Responsive grid layout */
         .numbers {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 columns when possible */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 5px;
             flex-grow: 1;
             padding: 5px;
+            overflow-y: auto; /* Allows scrolling if needed */
         }
 
         .number {
             display: flex;
             align-items: center;
             background: #f4f4f4;
-            padding: 8px;
+            padding: 10px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             font-size: 12px;
@@ -117,13 +117,24 @@
             font-weight: bold;
         }
 
+        /* Footer now always visible */
         .footer {
             text-align: center;
-            padding: 8px;
-            font-size: 11px;
+            padding: 10px;
+            font-size: 12px;
             background: #d32f2f;
             color: white;
             flex-shrink: 0;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 480px) {
+            .numbers {
+                grid-template-columns: 1fr; /* Single column on small screens */
+            }
+            .channel-4 {
+                grid-column: span 1; /* Takes full width in single column layout */
+            }
         }
     </style>
 </head>
