@@ -21,6 +21,7 @@
             height: 100vh;
             padding: 0;
             margin: 0;
+            overflow: hidden; /* Prevent scrolling */
         }
 
         .container {
@@ -29,19 +30,19 @@
             border-radius: 10px;
             width: 100%;
             max-width: 600px;
-            min-height: 100vh;
+            height: 100vh; /* Full height */
             display: flex;
             flex-direction: column;
-            overflow: hidden;
+            justify-content: space-between; /* Distribute space evenly */
         }
 
         .main-logo {
             text-align: center;
-            padding: 5px;
+            padding: 10px;
         }
 
         .main-logo img {
-            max-width: 80px;
+            max-width: 100px;
         }
 
         .header {
@@ -49,11 +50,10 @@
             color: #ffffff;
             text-align: center;
             padding: 10px;
-            flex-shrink: 0;
         }
 
         .header h1 {
-            font-size: 18px;
+            font-size: 20px;
         }
 
         .header p {
@@ -63,18 +63,18 @@
         .instruction {
             text-align: center;
             font-size: 12px;
-            padding: 5px;
+            padding: 5px 10px;
             color: #555;
         }
 
-        /* Responsive grid layout */
         .numbers {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 5px;
             flex-grow: 1;
-            padding: 5px;
-            overflow-y: auto; /* Allows scrolling if needed */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around; /* Evenly distribute space around items */
+            align-items: center;
+            padding: 10px;
+            gap: 10px;
         }
 
         .number {
@@ -83,32 +83,26 @@
             background: #f4f4f4;
             padding: 10px;
             border-radius: 5px;
+            width: 95%;
+            max-width: 500px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            font-size: 12px;
-            justify-content: start;
-        }
-
-        /* Make Channel 4 span full width */
-        .channel-4 {
-            grid-column: span 2;
-            justify-content: center;
         }
 
         .icon {
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
             background: #d32f2f;
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 50%;
-            font-size: 14px;
-            margin-right: 8px;
+            font-size: 16px;
+            margin-right: 10px;
         }
 
         .info {
-            font-size: 13px;
+            font-size: 14px;
         }
 
         .info a {
@@ -117,24 +111,12 @@
             font-weight: bold;
         }
 
-        /* Footer now always visible */
         .footer {
             text-align: center;
             padding: 10px;
             font-size: 12px;
             background: #d32f2f;
             color: white;
-            flex-shrink: 0;
-        }
-
-        /* Mobile responsiveness */
-        @media (max-width: 480px) {
-            .numbers {
-                grid-template-columns: 1fr; /* Single column on small screens */
-            }
-            .channel-4 {
-                grid-column: span 1; /* Takes full width in single column layout */
-            }
         }
     </style>
 </head>
@@ -176,6 +158,13 @@
             </div>
 
             <div class="number">
+                <div class="icon">📡</div>
+                <div class="info">
+                    Channel 4 - Two-Way Radio
+                </div>
+            </div>
+
+            <div class="number">
                 <div class="icon">🔒</div>
                 <div class="info">
                     <a href="tel:0556582933">0556 582 933</a> - Security
@@ -193,14 +182,6 @@
                 <div class="icon">🔒</div>
                 <div class="info">
                     <a href="tel:0322296755">0322 296 755</a> - Security
-                </div>
-            </div>
-
-            <!-- Channel 4 now spans full width -->
-            <div class="number channel-4">
-                <div class="icon">📡</div>
-                <div class="info">
-                    <b>Channel 4 - Two-Way Radio</b>
                 </div>
             </div>
         </div>
