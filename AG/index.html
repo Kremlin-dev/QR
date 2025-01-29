@@ -18,171 +18,187 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            height: 100vh;
+            padding: 10px;
         }
-
         .container {
             background: #ffffff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            max-width: 600px;
             width: 100%;
+            max-width: 450px;
+            padding: 15px;
+            display: flex;
             overflow: hidden;
+            margin: 0 auto;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
         }
 
         .header {
             background: #d32f2f;
             color: #ffffff;
+            padding: 5px 8px; /* Reduced padding */
+            border-radius: 5px;
+            font-size: 14px; /* Reduced font size */
+            margin-top: 10px;
             text-align: center;
-            padding: 20px 10px;
-        }
-
-        .header h1 {
-            font-size: 24px;
-            margin: 10px 0 5px;
-        }
-
-        .header p {
-            font-size: 14px;
-            font-weight: 300;
         }
 
         .instruction {
-            text-align: center;
             font-size: 14px;
-            margin: 15px 20px;
-            color: #555;
+            margin: 12px 0;
+            font-weight: bold;
         }
 
         .numbers {
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 10px 0;
         }
 
         .number {
             display: flex;
             align-items: center;
             background: #f4f4f4;
-            margin-bottom: 10px;
-            padding: 15px;
+            padding: 8px; /* Reduced padding */
             border-radius: 5px;
+            font-size: 14px;
+            justify-content: start;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .number:hover {
-            background: #f9ebeb;
-            cursor: pointer;
+            font-weight: bold;
         }
 
         .icon {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             background: #d32f2f;
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 50%;
-            font-size: 18px;
-            margin-right: 15px;
+            font-size: 14px;
+            margin-right: 10px;
+            flex-shrink: 0;
         }
 
         .info {
-            font-size: 16px;
+            display: flex;
+            align-items: center;
+            width: 100%;
         }
 
         .info a {
             text-decoration: none;
             color: #d32f2f;
             font-weight: bold;
+            font-size: 15px;
+            margin-right: 5px;
         }
 
         .footer {
-            text-align: center;
-            padding: 20px 15px;
             font-size: 12px;
-            background: #ffffff; 
-            border-top: 2px solid #f4f4f4; 
+            padding: 8px;
+            background: white; /* White background */
+            color: black; /* Black text color */
+            border-radius: 5px;
+            margin-top: 12px;
+            text-align: center;
         }
 
-        .footer strong {
-            display: block;
-            font-size: 14px;
-            color: #333;
-            margin-bottom: 8px;
+        .logo {
+            width: 60px; /* Reduced logo size */
+            height: 60px; /* Reduced logo size */
+            object-fit: contain;
+            object-position: center;
+            margin-top: 10px; /* Spacing from text */
         }
 
-        .footer p {
-            margin-bottom: 15px;
-            color: #777;
-            font-weight: 300;
-            line-height: 1.5;
-        }
+        @media (max-width: 480px) {
+            .container {
+                max-width: 380px;
+            }
 
-        .main-logo img {
-            max-width: 100px; 
-            margin-top: 10px;
+            .header {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .number {
+                font-size: 13px;
+                padding: 8px;
+            }
+
+            .info a {
+                font-size: 13px;
+            }
+
+            .icon {
+                width: 28px;
+                height: 28px;
+                font-size: 13px;
+            }
+
+            .footer {
+                font-size: 11px;
+                padding: 8px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Emergency Contact Numbers</h1>
-            <p>Ambulance | Fire | Rescue | Security</p>
+          <h1>Emergency Contact Numbers</h1>
+          <p>Ambulance | Fire | Rescue | Security</p>
         </div>
 
-        <div class="instruction">
-            <b>Click on the numbers below to call directly in case of an emergency.</b>
-        </div>
+        <div class="instruction">Tap a number to call in an emergency.</div>
 
         <div class="numbers">
             <div class="number">
-                <div class="icon">☎️</div>
+                <div class="icon">🚑</div>
                 <div class="info">
-                    <a href="tel:+0322091333">0322 091 333</a> - Landline/Mobile
+                    <a href="tel:0322091333">0322 091 333</a> - Landline/Mobile
                 </div>
             </div>
-
             <div class="number">
                 <div class="icon">📞</div>
                 <div class="info">
-                    <a href="tel:+800">800</a> - AGAG Landline
+                    <a href="tel:800">800</a> - AGAG Landline
                 </div>
             </div>
-
             <div class="number">
                 <div class="icon">📲</div>
                 <div class="info">
-                    <a href="tel:+0800400002">0800 400 002</a> - Toll Free/Mobile
+                    <a href="tel:0800400002">0800 400 002</a> - Toll-Free / Mobile
                 </div>
             </div>
-
+            <div class="number">
+                <div class="icon">🔒</div>
+                <div class="info">
+                    <a href="tel:0556582933">0556 582 933</a> - Security
+                </div>
+            </div>
+            <div class="number">
+                <div class="icon">🔒</div>
+                <div class="info">
+                    <a href="tel:0322296756">0322 296 756</a> - Security
+                </div>
+            </div>
+            <div class="number">
+                <div class="icon">🔒</div>
+                <div class="info">
+                    <a href="tel:0322296755">0322 296 755</a> - Security
+                </div>
+            </div>
             <div class="number">
                 <div class="icon">📡</div>
                 <div class="info">
-                    Channel 4 - Two-Way Radio
-                </div>
-            </div>
-
-            <div class="number">
-                <div class="icon">🔒</div>
-                <div class="info">
-                    <a href="tel:+0556582933">0556 582 933</a> - Security
-                </div>
-            </div>
-
-            <div class="number">
-                <div class="icon">🔒</div>
-                <div class="info">
-                    <a href="tel:+0322296756">0322 296 756</a> - Security
-                </div>
-            </div>
-
-            <div class="number">
-                <div class="icon">🔒</div>
-                <div class="info">
-                    <a href="tel:+0322296755">0322 296 755</a> - Security
+                    <a href="#">Channel 4</a> - Two-Way Radio
                 </div>
             </div>
         </div>
@@ -190,9 +206,7 @@
         <div class="footer">
             <strong>SENIOR MANAGER - HUMAN RESOURCES</strong>
             <p>Please avoid prank calls. This service is for emergencies only.</p>
-            <div class="main-logo">
-                <img src="./images/OIP.jpg" alt="Main Logo">
-            </div>
+            <img src="./images/OIP.jpg" alt="Company Logo" class="logo"> 
         </div>
     </div>
 </body>
